@@ -197,7 +197,7 @@ h2{
     flex-direction: row;
     align-items: center;
 }
-.carrusel::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
 #productos .product-fotos img{
