@@ -9,6 +9,7 @@
 </head>
 
 <body>
+docker run -p 4000:80 -d -v "$(pwd)/src:/var/www/html/" hello-php:1.0
     <h1><?php echo "PHP PARA PROYECTO" ?></h1>
 
     <form action="calculadora.php" method="post">
@@ -19,8 +20,6 @@
             <li>Ingrese 2 para restar</li>
             <li>Ingrese 3 para multiplicar</li>
             <li>Ingrese 4 para dividir</li>
-            <li>Ingrese 5 para potenciar</li>
-            <li>Ingrese otro para salir</li>
         </ul>
         <p>Operación : <input type="text" name="operacion" /></p>
         <p><input type="submit" /></p>
