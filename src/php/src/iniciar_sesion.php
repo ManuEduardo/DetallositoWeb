@@ -17,7 +17,10 @@
     
         validar_logueo($correo, $contrasena);
     } else {
-        echo "xd";
+        echo'<script type="text/javascript">
+        alert("Error 402");
+        window.location.href="../../formularios/form_ingreso.html";
+        </script>';
     }
 
     function validar_logueo($correo, $contrasena){
