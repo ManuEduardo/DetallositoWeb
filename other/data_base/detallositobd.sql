@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2022 a las 05:44:00
+-- Tiempo de generación: 14-12-2022 a las 04:16:20
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `detallositobd`
 --
-CREATE DATABASE IF NOT EXISTS `detallositobd` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `detallositobd`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `detallositobd`;
 -- Estructura de tabla para la tabla `detallepedido`
 --
 
-DROP TABLE IF EXISTS `detallepedido`;
 CREATE TABLE `detallepedido` (
   `id_pedido` int(11) NOT NULL,
   `id_producto` int(11) NOT NULL
@@ -41,7 +38,6 @@ CREATE TABLE `detallepedido` (
 -- Estructura de tabla para la tabla `pedido`
 --
 
-DROP TABLE IF EXISTS `pedido`;
 CREATE TABLE `pedido` (
   `id` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
@@ -56,7 +52,6 @@ CREATE TABLE `pedido` (
 -- Estructura de tabla para la tabla `producto`
 --
 
-DROP TABLE IF EXISTS `producto`;
 CREATE TABLE `producto` (
   `id` int(11) NOT NULL,
   `id_tipo` int(11) DEFAULT NULL,
@@ -69,7 +64,6 @@ CREATE TABLE `producto` (
 -- Estructura de tabla para la tabla `tipo`
 --
 
-DROP TABLE IF EXISTS `tipo`;
 CREATE TABLE `tipo` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
@@ -82,7 +76,6 @@ CREATE TABLE `tipo` (
 -- Estructura de tabla para la tabla `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,

@@ -25,7 +25,7 @@
         crear_usuario();
     } else { 
         echo'<script type="text/javascript">
-        alert("Error 402");
+        alert("Error al crear usuario");
         window.location.href="../../formularios/form_usuario.html";
         </script>';
     }
@@ -33,7 +33,9 @@
     function crear_usuario(){
         include("./conexion.php");
         $con = conectar();
-        $result = $con->query("select id, correo, contrasena, nombre from usuario");
+        $oracion_sql="select id, correo, contrasena, nombre from usuario ";
+        $result = $con->query($oracion_sql);
+        
 
         $con->close();
 
