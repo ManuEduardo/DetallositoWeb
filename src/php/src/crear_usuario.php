@@ -21,8 +21,15 @@
         $genero = $_POST['genero'];
         $numero = $_POST['numero'];
         $drone = $_POST['drone'];
-    
-        crear_usuario();
+
+        if($contrasena==$contrasena2){
+            crear_usuario();
+        }else{
+            echo'<script type="text/javascript">
+        alert("Contraseñas diferentes");
+        window.location.href="../../formularios/form_usuario.html";
+        </script>';
+        }
     } else { 
         echo'<script type="text/javascript">
         alert("Error al crear usuario");
@@ -33,9 +40,8 @@
     function crear_usuario(){
         include("./conexion.php");
         $con = conectar();
-        $oracion_sql="select id, correo, contrasena, nombre from usuario ";
+        $oracion_sql="insert into usuario(nombre, correo, contrasena, edad, genero, numero, tipo_usuario) values($nombre, $correo, $contrasena, $edad, $genero, $numero, $drone);";
         $result = $con->query($oracion_sql);
-        
 
         $con->close();
 
